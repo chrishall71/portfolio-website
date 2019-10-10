@@ -44,7 +44,6 @@ h3 {
 .page-header {
 	display: flex;
 	width: 100%;
-	padding: 0px;
 	background-color:var(--primary-color);
 }
 
@@ -118,8 +117,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	color: #2b2b2b;
 	border: none;
 	padding: 10px;
-	margin: auto;
-	margin-top: 10px;
+	margin: 10px auto;
 	border-radius: 3px;
 }
 
@@ -188,7 +186,6 @@ table tr:hover {
 	clear: both;
 	display: flex;
 	flex-direction: column;
-	position: fixed;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -214,8 +211,7 @@ table tr:hover {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
-	padding: 0px 20px;
-
+	padding:  20px;
 }
 
 .grid_item {
