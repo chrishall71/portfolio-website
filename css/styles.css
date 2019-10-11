@@ -1,11 +1,10 @@
 :root {
 	--primary-color: #0f54d3;
-	--menu-color: #ffffff;
+	--menu-color: white;
 	--table-color: #d1b307;
-	--h1-font-weight: 700;
-	--h1-font-size: 30px
- }
-
+	--h1-font-weight: bold;
+	--h1-font-size: 30px;
+}
 /* this is a universal * selector & apllies to all html elements*/
 * {
 box-sizing: border-box;
@@ -13,7 +12,7 @@ box-sizing: border-box;
 
 body {
 	position: relative;
-	background-color: #ffffff;
+	background-color: white;
 	font-family: 'Lato', sans-serif; /*imported google font*/
 	font-weight: 400;
 	font-size: 16px;
@@ -27,7 +26,7 @@ h1 {
 	font-weight: var(--h1-font-weight);
 }
 
-.h1-left { 
+.h1-left {
 	margin-left: 20px;
  }
 
@@ -190,7 +189,7 @@ table tr:hover {
 	right: 0;
 	left: 0;
 	height: 100px;
-	text-align: center; 
+	text-align: center;
 	background-color:var(--primary-color);
 	color: var(--menu-color);
 	position: absolute;
@@ -243,13 +242,13 @@ table tr:hover {
 	  grid-template-columns: 1fr;
 	}
  }
- 
+
  @media all and (min-width: 500px) and (max-width: 750px){
 	.grid {
 	  grid-template-columns: 1fr 1fr;
 	}
  }
- 
+
  @media all and (max-width: 750px) {
 	.grid {
 	  grid-gap: 10px;
