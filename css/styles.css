@@ -196,13 +196,43 @@ table tr:hover {
 	color: var(--menu-color);
 	position: absolute;
 }
-/* Grid controls start*/
+/* Flex box fallback*/
 .grid {
-	display: grid;
-	width: 100%;
-	grid-template-columns: auto auto auto;
-	grid-gap: 25px;
-	padding:  25px;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+	
+.grid_item {
+	background-color: #a7d7f3;
+	padding: 10px;
+	width: 100vw;
+	margin: 1.5vw;
+}
+
+@media (min-width: 600px){
+	.grid_item {
+		width: 45vw;
+		margin: 1.5vw;
+	}
+}
+
+@media (min-width: 900px){
+	.grid_item {
+	width: 30vw;
+	margin: 1.5vw;
+	}
+}
+
+/* Grid starts here*/
+@supports (display: grid){
+	.grid {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		padding:  10px;
+	}
 }
 
 .grid_item {
@@ -212,12 +242,6 @@ table tr:hover {
 	width: auto;
 }
 
-.grid_item:last-child {
-	grid-column-start: 3;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 3;
-}
 @media all and (max-width: 500px) {
 	.grid {
 	  grid-template-columns: auto;
@@ -234,32 +258,8 @@ table tr:hover {
 	.grid {
 	  grid-gap: 10px;
 	}
-	.grid_item:last-child {
-	  grid-column: auto / auto;
-	  grid-row: auto / auto;
-	}
+
 	h1 {
 	  font-size: 22px;
-	}
- }
-
- @keyframes color-change {
-	0% {
-	  fill: #edc655;
-	}
-	50% {
-	  fill: #fcffad;
-	}
-	100% {
-	  fill: #f76414;
-	}
- }
-
- @keyframes cloud-move {
-	from {
-	  transform: translate(0, 50px);
-	}
-	to {
-	  transform: translate(200px, 50px);
 	}
  }
